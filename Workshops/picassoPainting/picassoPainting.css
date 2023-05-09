@@ -1,0 +1,19 @@
+
+h2 {
+    text-align: center;
+}
+body {
+    background-color: aquamarine;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+}
+
+img {
+    width: 30%;
+    height: 30%;
+}
+
+article {
+    color: blue;
+}
