@@ -37,18 +37,18 @@
 //     }
 // }
 
-// function oddNumbers(num) {
-//    for(let i = num; i < 100; i += 2){ 
-//     console.log('Odd Numbers:', i)
-//         if(num % 2 ===0) {
-//         num++
+function oddNumbers(num) {
+   for(let i = num; i < 100; i += 2){ 
+    console.log('Odd Numbers:', i)
+        if(num % 2 ===0) {
+        num++
        
-//         }
-//     }
-// }
+        }
+    }
+}
 
-// oddNums(2)
-// oddNumbers(2)
+oddNums(2)
+oddNumbers(2)
 
 // Practice 3:
 // Multiplication tables
