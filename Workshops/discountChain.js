@@ -39,6 +39,37 @@ function discountChain(driver) {
     }
 }
 
-console.log(discountChain(timmy))
-console.log(discountChain(sarah))
-console.log(discountChain(rocky))
+// console.log(discountChain(timmy))
+// console.log(discountChain(sarah))
+// console.log(discountChain(rocky))
+
+
+function totalAmount(driver) {
+    let totalCost = driver.pricePerRefill * driver.refills
+    return totalCost
+}
+
+function subscription(driver) {
+    if (driver.subscription === true) {
+        let withSub = (totalAmount(driver) * 0.75)
+        return withSub
+    } else {
+        return totalAmount(driver)
+    }
+}
+
+function discount(driver) {
+    if (driver.coupon === true && driver.subscription === true) {
+        let withDiscount = subscription(driver) - 10
+        return withDiscount
+    } else if (driver.coupon === false && driver.subscription === true) {
+        return subscription(driver)
+    } else if (driver.coupon === true && driver.subscription === false) {
+        return totalAmount(driver) - 10
+    }
+}
+
+
+console.log(discount(timmy))
+console.log(discount(sarah))
+console.log(discount(rocky))
