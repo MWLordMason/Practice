@@ -1,0 +1,30 @@
+
+
+#products-container {
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+}
+
+#posts-container {
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+}
+
+.containers {
+    display: flex;
+    flex-flow: column wrap;
+    width: 45%;
+    border: 2px solid black
+}
+
+.columns {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+}
+
+#title {
+    text-align: center;
+}
