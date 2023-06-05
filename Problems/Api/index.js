@@ -13,7 +13,8 @@ async function fetchProductData() {
 }
 
 async function renderProducts() {
-    let productDisplay = document.getElementById("products-container")
+    try {
+        let productDisplay = document.getElementById("products-container")
     let product = await fetchProductData()
     console.log(product)
     product.forEach((stat) => {
@@ -31,6 +32,10 @@ async function renderProducts() {
         productList.style.paddingBottom = "2%"
         productDisplay.appendChild(productList)
     })
+    } catch (error) {
+        console.log(error)
+    }
+    
 }
 
 
@@ -47,7 +52,8 @@ async function fetchPostData() {
 }
 
 async function renderPosts() {
-    let postDisplay = document.getElementById("posts-container")
+    try {
+        let postDisplay = document.getElementById("posts-container")
     let post = await fetchPostData()
     console.log(post)
     post.forEach((stat) => {
@@ -63,6 +69,10 @@ async function renderPosts() {
         postList.style.paddingBottom = "2%"
         postDisplay.appendChild(postList)
     })
+    } catch (error) {
+        console.log(error)
+    }
+    
 }
 
 renderProducts()
